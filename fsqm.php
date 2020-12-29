@@ -1,16 +1,27 @@
-<?
+<?php
+session_start();
+
+$servername="localhost";
+$username="root";
+$password="";
+$dbname="fsqm_kms_db";
+
+$connection = new mysqli($servername,$username,$password,$dbname);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>IToolbox PH</title>
+  <title>Fixed Service Quality Management</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="img/itool.png" rel="icon">
-  <link href="img/itool.png" rel="apple-touch-icon">
+  <link href="img/FSQM.jpg" rel="icon">
+  <link href="img/FSQM.jpg" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
@@ -43,14 +54,11 @@
     Top Bar
   ============================-->
   <section id="topbar" class="d-none d-lg-block">
-    <div class="container clearfix">
-      <div class="contact-info float-left">
-        <i class="fa fa-envelope-o"></i> <a href="">njamortel@gmail.com</a>
-        <i class="fa fa-phone"></i>09992298724
-      </div>
+
+   <div class="container clearfix">
+
       <div class="social-links float-right">
-        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-        <a href="https://web.facebook.com/IToolboxPH/" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="https://pldtsmart.facebook.com/groups/244151405946702/" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
         <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
         <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
         <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
@@ -63,26 +71,12 @@
   ============================-->
   <header id="header">
     <div class="container">
-
       <div id="logo" class="pull-left">
-        <h1><a href="#body" class="scrollto" style="color:#ef3f34;">IToolbox <span style="color:#001b81;">PH</span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+      <a href="#body"><img src="img/smart-pldt-logo.png" alt="" title="FSQM" /></a>
       </div>
 
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="#body">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-
-
-          <li><a href="#team">Team</a></li>
-
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav><!-- #nav-menu-container -->
     </div>
-  </header><!-- #header -->
+  </header>
 
   <!--==========================
     Intro Section
@@ -90,10 +84,15 @@
   <section id="intro">
 
     <div class="intro-content">
-      <h2>IT solutions for every Filipino</h2>
+        <img src="img/FSQM.jpg" alt="logo" title="FSQM" /></br>
+        <h3><a href="#body" class="scrollto" style="color:#cc0000;">FSQM - <span style="color:#33cc33;">Fixed Service Quality Managment</span></h3>
+
+    </a>
+
       <div>
-        <a href="#about" class="btn-get-started scrollto">Get Started</a>
-        <a href="#portfolio" class="btn-projects scrollto">Our Projects</a>
+        <a href="#about" class="btn-get-started scrollto">Learn More</a>
+        <a href="http://10.16.17.73/FSQM_Dashboard/" class="btn-projects scrollto">Our Dashboard</a>
+
       </div>
     </div>
 
@@ -113,28 +112,15 @@
       About Section
     ============================-->
     <section id="about" class="wow fadeInUp">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 about-img">
-            <img src="img/itool.png" alt="" style="width:300px;">
-          </div>
-
+      <center>
           <div class="col-lg-6 content">
-            <h2>We are a private organization that will guide and assist Filipino on their journey to succeed on whichever technology they aimed.
-</h2>
-            <h3> The organization named ‘ITtoolboxPH’ offers:
-</h3>
-
             <ul>
-              <li><i class="ion-android-checkmark-circle"></i>IToolboxPH Cloud Platform</li>
-              <li><i class="ion-android-checkmark-circle"></i>Technology Solution Provider and Consultation</li>
-              <li><i class="ion-android-checkmark-circle"></i>Products and Sevices</li>
+              <li><i class="ion-android-checkmark-circle"></i>Oversee the monitoring and analysis of network service performance and their impact to customer experience and level of satisfaction.</li>
+              <li><i class="ion-android-checkmark-circle"></i>Ensure consistent conformance of various products & services with set quality standard to enhance the level of customer satisfaction and attain the desired standard of customer experience.</li>
             </ul>
-
           </div>
-        </div>
+      </center>
 
-      </div>
     </section><!-- #about -->
 
     <!--==========================
@@ -147,62 +133,12 @@
 
 
 
-
-
-
-
-<section id="misvis" style="margin-top:50px;">
-
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <div class="section-header">
-      <center> <h2>Mission</h2> </center>
-      </div>
-      <p>Promote the technology solutions of IToolboxPH in order to serve Filipino on their daily lives or operation by providing updated and useful technologies for every Filipino.
-</p>
-    </div>
-    <div class="col-md-6">
-    <div class="section-header">
-    <center> <h2>Vision</h2> </center>
-    </div>
-    <p>Let the Filipino adapt the technology trends and inspire to use the technology as a service and help the environment and the society.
-<br>
-IToolboxPH will be the leading IT resource provider that will guide and assist fellow IT professional. As a service, IToolboxPH will contribute to our society by giving what the Filipino deserve or what they should have especially the needy one and the lowest class Filipinos.
-
-</p>
-  </div>
-</div>
-</div>
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!--==========================
       Clients Section
     ============================-->
-    <section id="clients" class="wow fadeInUp">
-      <div class="container">
-        <div class="section-header">
-          <h2>Who can join our organization?</h2>
-          <p>All Filipino interested to the adaptation of technology trends are welcome to be a part of the organization’s community</p>
-        </div>
 
-      </div>
-    </section><!-- #clients -->
+
+
 
 
 
@@ -215,45 +151,51 @@ IToolboxPH will be the leading IT resource provider that will guide and assist f
           <h2>Our Team</h2>
         </div>
         <div class="row">
-          <div class="col-lg-3 col-md-6">
-
-          </div>
 
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="img/t-nico.png" alt=""></div>
+
+              <div class="pic"><img src="img/FSNTP.jpg" alt="FSNTP"></div>
               <div class="details">
-                <h4>Nico Mortel</h4>
-                <span>Founder</span>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href="https://web.facebook.com/njamortel?lst=100000139458181%3A1709910216%3A1532340774" target="_blank"><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
+                <h4>FSNTP</h4>
+                <span>Fixed Service Network & Traffic Management</span>
               </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="img/t-jesson.png" alt=""></div>
-              <div class="details">
-                <h4>Jesson Paloma</h4>
-                <span>Programmer/Developer</span>
-                <div class="social"  style="padding-top:38px;">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href="https://web.facebook.com/jayson.paloma.1" target="_blank"><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
               </div>
+           </div>
+
+           <div class="col-lg-3 col-md-6">
+             <div class="member">
+
+               <div class="pic"><img src="img/FSQM-SPS.jpg" alt="FSQM-SPS"></div>
+               <div class="details">
+                 <h4>FSQM-SPS</h4>
+                 <span>Fixed Service Quality Management - Simple Products & Services</span>
+               </div>
+               </div>
             </div>
-          </div>
 
-          <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6">
+              <div class="member">
 
-        </div>
+                <div class="pic"><img src="img/FSQM-CPS.jpg" alt="FSQM-CPS"></div>
+                <div class="details">
+                  <h4>FSQM-CPS</h4>
+                  <span>Fixed Service Quality Management - Complex Products & Services</span>
+                </div>
+                </div>
+             </div>
+
+             <div class="col-lg-3 col-md-6">
+               <div class="member">
+
+                 <div class="pic"><img src="img/FSQA.jpg" alt="FSQA"></div>
+                 <div class="details">
+                   <h4>FSQA</h4>
+                   <span>Fixed Service Quality Assurance</span>
+                 </div>
+                 </div>
+              </div>
+
 
       </div>
     </section><!-- #team -->
@@ -273,7 +215,7 @@ IToolboxPH will be the leading IT resource provider that will guide and assist f
             <div class="contact-address">
               <i class="ion-ios-location-outline" style="color:#ef3f34;"></i>
               <h3>Address</h3>
-              <address>Manila, Philippines</address>
+              <address>  </address>
             </div>
           </div>
 
@@ -281,7 +223,7 @@ IToolboxPH will be the leading IT resource provider that will guide and assist f
             <div class="contact-phone">
               <i class="ion-ios-telephone-outline" style="color:#ef3f34;"></i>
               <h3>Phone Number</h3>
-              <p><a href="tel:+155895548855">09992298724</a></p>
+              <p><a href="tel:+#"> </a></p>
             </div>
           </div>
 
@@ -289,14 +231,12 @@ IToolboxPH will be the leading IT resource provider that will guide and assist f
             <div class="contact-email">
               <i class="ion-ios-email-outline" style="color:#ef3f34;"></i>
               <h3>Email</h3>
-              <p>njamortel@gmail.com</p>
+              <p> </p>
             </div>
           </div>
 
         </div>
       </div>
-
-      <div id="google-map" data-latitude="14.599512" data-longitude="120.984219"></div>
 
     </section><!-- #contact -->
 
@@ -308,7 +248,8 @@ IToolboxPH will be the leading IT resource provider that will guide and assist f
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>IToolboxPH</strong>. All Rights Reserved
+        &copy; Copyright 2018 <strong>PLDT FSQM</strong>. All Rights Reserved
+
       </div>
 
     </div>

@@ -4,7 +4,7 @@
 $servername="localhost";
 $username="root";
 $password="";
-$dbname="fsqm-kms";
+$dbname="fsqm_kms_db";
 
 $connection = new mysqli($servername,$username,$password,$dbname);
 
